@@ -1,0 +1,51 @@
+<div
+  class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4 text-center relative"
+>
+  <!-- Theme Toggle -->
+  <button
+    (click)="toggleTheme()"
+    aria-label="Toggle theme"
+    class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 shadow hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+  >
+    {{ isDarkMode() ? "☀️" : "☾" }}
+  </button>
+
+  <div
+    class="bg-white dark:bg-gray-800 w-full max-w-md p-8 sm:p-10 rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 text-gray-900 dark:text-white"
+  >
+    <ng-container *ngIf="user(); else spinner">
+      <!-- Avatar -->
+      <div
+        class="w-14 h-14 mx-auto mb-4 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xl font-semibold"
+      >
+        {{ initials() }}
+      </div>
+
+      <!-- Welcome -->
+      <h1 class="text-3xl font-semibold mb-2 tracking-tight">
+        Welcome, {{ fullName() }}
+      </h1>
+
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-1 truncate">
+        {{ user()?.email }}
+      </p>
+      <p class="text-xs text-gray-500 dark:text-gray-400 mb-6">
+        Session active
+      </p>
+
+      <hr class="border-gray-200 dark:border-gray-700 mb-6"/>
+
+      <button
+        (click)="onLogout()"
+        aria-label="Logout"
+        class="w-full py-2 px-4 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors"
+      >
+        Logout
+      </button>
+    </ng-container>
+
+    <ng-template #spinner>
+      <app-spinner/>
+    </ng-template>
+  </div>
+</div>

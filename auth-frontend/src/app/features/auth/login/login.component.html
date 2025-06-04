@@ -1,0 +1,85 @@
+<div
+  class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4"
+>
+  <div
+    class="w-full max-w-md bg-white dark:bg-gray-800 p-8 sm:p-10 rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 text-gray-900 dark:text-white"
+  >
+    <ng-container *ngIf="!loading() && !redirecting(); else spinner">
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <h2 class="text-3xl font-semibold tracking-tight">Login</h2>
+        <img
+          alt="App Icon"
+          class="w-8 h-8 rounded-md"
+          height="96"
+          loading="lazy"
+          ngSrc="/favicon.ico"
+          width="96"
+        />
+      </div>
+
+      <form (ngSubmit)="login()" [formGroup]="form" class="space-y-4">
+        <!-- Email -->
+        <div>
+          <input
+            autocomplete="email"
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            formControlName="email"
+            placeholder="Email"
+            type="email"
+          />
+          <app-form-error [form]="form" controlName="email"/>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <input
+            autocomplete="current-password"
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            formControlName="password"
+            placeholder="Password"
+            type="password"
+          />
+          <app-form-error [form]="form" controlName="password"/>
+        </div>
+
+        <!-- Global Error -->
+        <app-form-error [error]="loginError() ?? undefined"/>
+
+        <!-- Submit -->
+        <button
+          [attr.aria-busy]="loading()"
+          [disabled]="form.invalid || loading()"
+          class="w-full py-2 px-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+          type="submit"
+        >
+          Login
+        </button>
+      </form>
+
+      <div class="mt-4 text-right text-sm">
+        <a
+          class="text-blue-600 hover:underline dark:text-blue-400"
+          routerLink="/forgot-password"
+        >
+          Forgot password?
+        </a>
+      </div>
+
+      <div
+        class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 text-center text-sm text-gray-600 dark:text-gray-400"
+      >
+        Don’t have an account?
+        <a
+          class="text-blue-600 hover:underline dark:text-blue-400"
+          routerLink="/register"
+        >
+          Register
+        </a>
+      </div>
+    </ng-container>
+
+    <ng-template #spinner>
+      <app-spinner/>
+    </ng-template>
+  </div>
+</div>

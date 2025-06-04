@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome to AuthApp</title>
+</head>
+<body>
+
+<!-- Hidden preview text: Welcome Email -->
+<div style="display: none; font-size: 1px; line-height: 1px; color: #ffffff; max-height: 0; max-width: 0; opacity: 0; overflow: hidden;">
+    Welcome to AuthApp! Your account was created successfully.
+</div>
+
+<h2>Welcome <span th:text="${name}">User</span> 👋</h2>
+
+<p>
+    Thanks for signing up with <strong>AuthApp</strong>. We're excited to have you on board.
+</p>
+
+<p>
+    If you have any questions or need help, feel free to reach out anytime.
+</p>
+
+<p>
+    — The AuthApp Team
+</p>
+
+</body>
+</html>
