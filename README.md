@@ -1,4 +1,4 @@
-# Full Stack Auth Starter
+# Full Stack JWT Auth Starter
 
 A clean, full-stack authentication starter built with Spring Boot 3 (Java) and Angular 19 (TypeScript) thats ready for production and easy to deploy on AWS.
 
