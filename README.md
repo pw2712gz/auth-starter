@@ -1,6 +1,6 @@
-# Auth Starter – Full Stack Auth Boilerplate
+# Full Stack Auth Starter
 
-A clean, full-stack authentication starter built with Spring Boot 3 (Java) and Angular 19 (TypeScript) – ready for production and easy to deploy on AWS.
+A clean, full-stack authentication starter built with Spring Boot 3 (Java) and Angular 19 (TypeScript) thats ready for production and easy to deploy on AWS.
 
 ---
 
@@ -26,7 +26,6 @@ A clean, full-stack authentication starter built with Spring Boot 3 (Java) and A
 ## Live Demo
 
 Frontend: https://auth.ayubyusuf.dev  
-Backend: Deployed via AWS App Runner
 
 ---
 
@@ -52,7 +51,7 @@ npm run dev
 
 ## Screenshots
 
-(Add your screenshots here)
+
 
 ---
 
