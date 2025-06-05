@@ -1,0 +1,5 @@
+service_name            = "auth-backend"
+github_repo             = "pw2712gz/auth-starter"
+github_branch           = "main"
+aws_region              = "us-east-1"
+github_connection_arn   = "arn:aws:apprunner:us-east-1:381492019345:connection/auth-starter-github-connection/e685c2a63ea54021b0619c0166bd971e"
