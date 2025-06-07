@@ -18,8 +18,6 @@ export class DashboardComponent {
   readonly isDarkMode = computed(() =>
     document.documentElement.classList.contains('dark')
   );
-  private userStore = inject(UserStoreService);
-  user = this.userStore.currentUser;
   readonly initials = computed(() => {
     const u = this.user();
     if (!u) return '';
@@ -32,6 +30,8 @@ export class DashboardComponent {
     if (!u) return '';
     return `${this.capitalize(u.firstName)} ${this.capitalize(u.lastName)}`;
   });
+  private userStore = inject(UserStoreService);
+  user = this.userStore.currentUser;
   private router = inject(Router);
   private authService = inject(AuthService);
   private themeService = inject(ThemeService);
