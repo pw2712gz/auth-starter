@@ -1,4 +1,4 @@
-# Auth Frontend 
+# Auth Frontend
 
 Modern Angular frontend for JWT authentication. Clean standalone components, auto token refresh, and all the auth UI you need. Pairs with the Spring Boot auth backend.
 
@@ -14,23 +14,27 @@ Modern Angular frontend for JWT authentication. Clean standalone components, aut
 ## Features
 
 ### Authentication
+
 - Login & Registration with JWT tokens
 - Auto-refresh expired tokens (no random logouts)
 - Protected routes with guards
 - User session management with signals
 
 ### Password Reset
+
 - Forgot password flow
 - Secure token-based reset
 - Clean form validation
 
 ### UI/UX
+
 - Minimal, developer-focused design
 - Responsive Tailwind styling
 - Loading states and error handling
 - Clean form components
 
 ### Testing
+
 - Unit tests for services and guards
 - Modern testing with `provideHttpClientTesting`
 - Component interaction tests
@@ -44,6 +48,7 @@ npm install
 ```
 
 **Set API endpoint:**
+
 ```ts
 // src/environments/environment.ts
 export const environment = {
@@ -53,6 +58,7 @@ production: false,
 ```
 
 **Run it:**
+
 ```bash
 ng serve
 ```
@@ -61,13 +67,13 @@ App runs at `http://localhost:4200`
 
 ## 🔧 Routes
 
-| Route | What it does | Guard |
-|-------|--------------|-------|
-| `/login` | Login page | Redirect if logged in |
-| `/register` | Sign up page | Redirect if logged in |
-| `/forgot-password` | Password reset request | Public |
-| `/reset-password` | Reset form with token | Public |
-| `/dashboard` | Protected main page | Auth required |
+| Route              | What it does           | Guard                 |
+|--------------------|------------------------|-----------------------|
+| `/login`           | Login page             | Redirect if logged in |
+| `/register`        | Sign up page           | Redirect if logged in |
+| `/forgot-password` | Password reset request | Public                |
+| `/reset-password`  | Reset form with token  | Public                |
+| `/dashboard`       | Protected main page    | Auth required         |
 
 ## Structure
 
@@ -111,6 +117,7 @@ npm test
 ```
 
 Covers:
+
 - **AuthService** - login, register, token handling
 - **Guards** - route protection logic
 - **Interceptors** - token refresh flow
