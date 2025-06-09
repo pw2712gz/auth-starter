@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://auth.ayubyusuf.dev',
+  apiUrl: 'https://auth.ayubyusuf.dev/api',
 };
