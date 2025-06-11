@@ -51,7 +51,12 @@ npm run dev
 
 ## 🖼️ Screenshots
 
-> *(Add screenshots of login, dashboard, reset password, etc. here)*
+> *
+> ![screencapture-auth-ayubyusuf-dev-forgot-password-2025-06-11-00_13_16](https://github.com/user-attachments/assets/0c342124-487d-49e6-aa7c-22b9e4085343)
+![screencapture-auth-ayubyusuf-dev-dashboard-2025-06-11-00_10_32](https://github.com/user-attachments/assets/12ceb242-f312-4ecc-aa61-85099725de72)
+![screencapture-auth-ayubyusuf-dev-register-2025-06-11-00_12_50](https://github.com/user-attachments/assets/9f096293-74ca-43dc-81c9-1565c7a14de0)
+![screencapture-auth-ayubyusuf-dev-login-2025-06-11-00_12_42](https://github.com/user-attachments/assets/c00f2ecc-c1f1-4095-a75c-1c9c2c89c0fa)
+*
 
 ---
 
