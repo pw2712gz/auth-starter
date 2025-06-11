@@ -2,7 +2,13 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/auth-backend/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/auth-backend/.mvn" />
+      <excludeFolder url="file://$MODULE_DIR$/auth-backend/secrets" />
+      <excludeFolder url="file://$MODULE_DIR$/auth-backend/target" />
+      <excludeFolder url="file://$MODULE_DIR$/auth-frontend/.idea" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
