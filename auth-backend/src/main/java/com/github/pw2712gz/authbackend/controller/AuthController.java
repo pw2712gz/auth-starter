@@ -97,4 +97,12 @@ public class AuthController {
                 ? ResponseEntity.ok(new MessageResponse("Password successfully reset."))
                 : ResponseEntity.badRequest().body(new MessageResponse("Invalid or expired token."));
     }
+
+    /**
+     * Public health check endpoint for load balancers or uptime monitors.
+     */
+    @GetMapping("/health")
+    public ResponseEntity<MessageResponse> healthCheck() {
+        return ResponseEntity.ok(new MessageResponse("OK"));
+    }
 }

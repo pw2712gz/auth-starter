@@ -18,7 +18,7 @@ export class AuthService {
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
   private readonly userStore = inject(UserStoreService);
-  private readonly BASE_URL = `${environment.apiUrl}/api/auth`;
+  private readonly BASE_URL = `${environment.apiUrl}/auth`;
 
   login(payload: LoginRequest): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(`${this.BASE_URL}/login`, payload).pipe(
