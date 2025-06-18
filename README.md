@@ -33,19 +33,19 @@ A clean, full-stack authentication starter built with **Spring Boot 3** (Java) a
 
 ### Backend + MySQL
 
-\`\`\`bash
+```bash
 cd auth-backend
 cp .env.example .env
 docker compose -f docker-compose.backend.yml up --build
-\`\`\`
+```
 
 ### Frontend
 
-\`\`\`bash
+```bash
 cd auth-frontend
 npm install
 npm run dev
-\`\`\`
+```
 
 ---
 
@@ -67,6 +67,13 @@ npm run dev
 - **Email** → Resend
 
 For full setup instructions, see each folder’s `README`.
+
+---
+
+## Related Projects
+- **Connect Auth – OAuth2 Login Starter**
+- **https://github.com/pw2712gz/connect-auth**
+- **A server-rendered OAuth2 starter with GitHub and Google login (Spring Boot + Thymeleaf).**
 
 ---
 
