@@ -57,7 +57,6 @@ public class RateLimitingFilter implements Filter {
             }
 
             if (info.count > MAX_REQUESTS) {
-                log.warn("[RateLimit] IP {} exceeded limit on {} ({} requests)", ip, path, info.count);
                 httpResp.setStatus(429);
                 httpResp.setContentType("application/json");
                 httpResp.getWriter().write("""
