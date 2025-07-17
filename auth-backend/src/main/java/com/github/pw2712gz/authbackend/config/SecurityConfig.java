@@ -29,8 +29,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.util.List;
@@ -44,11 +42,11 @@ import java.util.List;
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
-    @Value("${jwt.public-key-path}")
-    private String publicKeyPath;
+    @Value("${jwt.public-key-pem}")
+    private String publicKeyPem;
 
-    @Value("${jwt.private-key-path}")
-    private String privateKeyPath;
+    @Value("${jwt.private-key-pem}")
+    private String privateKeyPem;
 
     @Value("#{'${cors.allowed-origins}'.split(',')}")
     private List<String> allowedOrigins;
@@ -106,14 +104,12 @@ public class SecurityConfig {
 
     @Bean
     public RSAPublicKey publicKey() throws Exception {
-        var pem = Files.readString(Path.of(publicKeyPath));
-        return (RSAPublicKey) PemUtils.parsePublicKey(pem);
+        return (RSAPublicKey) PemUtils.parsePublicKey(publicKeyPem);
     }
 
     @Bean
     public RSAPrivateKey privateKey() throws Exception {
-        var pem = Files.readString(Path.of(privateKeyPath));
-        return (RSAPrivateKey) PemUtils.parsePrivateKey(pem);
+        return (RSAPrivateKey) PemUtils.parsePrivateKey(privateKeyPem);
     }
 
     @Bean
